@@ -1,0 +1,22 @@
+¿Por qué Bicicleta funcionó en mostrar() y en masEconomico() sin cambiar una sola línea de Flota?
+Porque Flota usa polimorfismo y trabaja con la clase generica Vehiculo. Como Bicicleta hereda de Vehiculo, el sistema la acepta automaticamente sin modificar la flota.
+
+¿Por qué Vehiculo es abstracta y Moto no? ¿Qué pasaría si Moto también lo fuera?
+Vehiculo es abstracta porque es un concepto base y no debe instanciarse; Moto es concreta porque representa un vehiculo real. Si Moto fuera abstracta, no se podrian crear objetos de tipo Moto (new Moto(...)).
+
+¿Por qué Bodega implementa Asegurable pero no hereda de Vehiculo?
+Porque una bodega no es un vehiculo y no le corresponden sus atributos, pero si comparte la necesidad de calcular un seguro, cumpliendo ese contrato mediante la interfaz.
+
+¿Qué diferencia hay entre super(placa, capacidadKg) y super.describir()?
+El primero llama al constructor del padre para inicializar atributos, y el segundo invoca el metodo original del padre para reutilizar su codigo y complementarlo.
+
+Cierre del curso: POO y pilares en el codigo
+La POO organiza el software en objetos que unen datos y metodos.
+
+Abstraccion: La clase Vehiculo define la estructura general.
+
+Encapsulamiento: Atributos privados accesibles mediante metodos get y set.
+
+Herencia: Moto o Camion heredan atributos y metodos de Vehiculo.
+
+Polimorfismo: La flota ejecuta el metodo especifico de cada vehiculo automaticamente.
